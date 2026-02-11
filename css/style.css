@@ -280,3 +280,33 @@ header {
     .glow-text { font-size: 2.8rem; }
     .stat-side { flex-direction: column; gap: 20px; }
 }
+
+/* --- Tambahan Styling Foto Profil --- */
+.profile-img-container {
+    margin-bottom: 25px; /* Jarak antara foto dan nama */
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 180px; /* Ukuran yang pas untuk desktop */
+    height: 180px;
+    border-radius: 50%; /* Membuat foto jadi lingkaran */
+    object-fit: cover;
+    border: 3px solid var(--cyan); /* Aksen neon sesuai tema */
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.3); /* Glow tipis */
+    transition: transform 0.5s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Efek zoom tipis saat hover */
+    box-shadow: 0 0 30px rgba(0, 242, 255, 0.5);
+}
+
+/* Responsif untuk layar kecil/HP */
+@media (max-width: 600px) {
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+}
